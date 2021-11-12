@@ -1,8 +1,8 @@
-package com.github.elenaAeternanox.thirdHomeWork;
+package com.github.elenaAeternanox.sixthDotOneHomeWork;
 
 import java.util.List;
 
-import static com.github.elenaAeternanox.thirdHomeWork.RealEstate.*;
+import static com.github.elenaAeternanox.sixthDotOneHomeWork.RealEstate.*;
 
 public class Purchase {
 

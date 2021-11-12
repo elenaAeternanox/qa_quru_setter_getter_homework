@@ -1,4 +1,4 @@
-package com.github.elenaAeternanox.thirdHomeWork;
+package com.github.elenaAeternanox.sixthDotOneHomeWork;
 
 public class Customer {
 
