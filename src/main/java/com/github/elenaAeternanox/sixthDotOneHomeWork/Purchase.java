@@ -17,7 +17,7 @@ public class Purchase {
             System.out.println(CUSTOMERS_SUM_PRINT + customerSum);
             System.out.println(APARTS_PRICE_PRINT + apartPrice);
             possibilityCalc(apartPrice, customerSum);
-            System.out.println("");
+            System.out.println(EMPTY_RAW_PRINT);
         }
 
         public void possibilityCalc(int apartPrice, int customerHas) {
@@ -31,7 +31,7 @@ public class Purchase {
         }
 
         public void possibilityPrint(boolean purchaseIsPossible) {
-            if (purchaseIsPossible == false) {
+            if (!purchaseIsPossible) {
                 System.out.println("Purchase's impossible :(");
             } else {
                 System.out.println("Congrats!!! Purchase's possible :)");
@@ -110,15 +110,11 @@ public class Purchase {
                 "");
 
 
-        Seller firstSeller = new Seller();
-        firstSeller.setSellersName("First seller");
-        firstSeller.setSellersAddress("First seller's address");
+        Seller firstSeller = new Seller("First seller", "First seller's address");
         firstSeller.setApartsList(List.of(firstApart, secondApart));
         firstSeller.setHousesList(List.of(secondHouse));
 
-        Seller secondSeller = new Seller();
-        secondSeller.setSellersName("Second seller");
-        secondSeller.setSellersAddress("Second seller's address");
+        Seller secondSeller = new Seller("Second seller", "Second seller's address");
         secondSeller.setHousesList(List.of(firstHouse));
 
         firstSeller.sellerDescription();
@@ -139,8 +135,8 @@ public class Purchase {
         } else {
             System.out.println("There aren't houses");
         }
-        System.out.println("");
-        System.out.println("");
+        System.out.println(EMPTY_RAW_PRINT);
+        System.out.println(EMPTY_RAW_PRINT);
 
         secondSeller.sellerDescription();
         /* check apart's list and house's list aren't empty

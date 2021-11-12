@@ -9,24 +9,13 @@ public class Seller {
     public static String EMPTY_RAW_PRINT = " ";
     public static String SELLER_ADDRESS = "Seller's address: ";
 
-    private String sellersName;
-    private String sellersAddress;
+    String sellersName;
+    String sellersAddress;
     private List<RealEstate.Apart> apartsList;
     private List<RealEstate.House> housesList;
 
-    public String getSellersName() {
-        return sellersName;
-    }
-
-    public void setSellersName(String sellersName) {
+    public Seller(String sellersName, String sellersAddress) {
         this.sellersName = sellersName;
-    }
-
-    public String getSellersAddress() {
-        return sellersAddress;
-    }
-
-    public void setSellersAddress(String sellersAddress) {
         this.sellersAddress = sellersAddress;
     }
 
