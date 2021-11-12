@@ -10,10 +10,6 @@ public class Customer {
     private String customersName;
     private int customersSum;
 
-    public String getCustomersName() {
-        return customersName;
-    }
-
     public void setCustomersName(String customersName) {
         this.customersName = customersName;
     }
@@ -26,7 +22,7 @@ public class Customer {
         this.customersSum = customersSum;
     }
 
-    public void customerDescription() {
+    public void printCustomerDescription() {
         System.out.println(CUSTOMER_TYPE_PRINT);
         System.out.println(CUSTOMER_NAME_PRINT + customersName);
         System.out.println(SUM_PRINT + customersSum);

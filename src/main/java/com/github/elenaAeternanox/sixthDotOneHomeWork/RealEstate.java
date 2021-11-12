@@ -37,39 +37,23 @@ public class RealEstate {
             this.apartPrice = apartPrice;
         }
 
-        public String getApartAddress() {
-            return apartAddress;
-        }
-
         public void setApartAddress(String apartAddress) {
             this.apartAddress = apartAddress;
-        }
-
-        public double getApartSquare() {
-            return apartSquare;
         }
 
         public void setApartSquare(double apartSquare) {
             this.apartSquare = apartSquare;
         }
 
-        public int getApartNumberOfRooms() {
-            return apartNumberOfRooms;
-        }
-
         public void setApartNumberOfRooms(int apartNumberOfRooms) {
             this.apartNumberOfRooms = apartNumberOfRooms;
-        }
-
-        public boolean isApartIsSold() {
-            return apartIsSold;
         }
 
         public void setApartIsSold(boolean apartIsSold) {
             this.apartIsSold = apartIsSold;
         }
 
-        public void apartDescription() {
+        public void printApartDescription() {
             System.out.println(APARTMENT_TYPE_PRINT);
             System.out.println(ID_PRINT + apartId);
             System.out.println(PRICE_PRINT + apartPrice);
@@ -106,40 +90,20 @@ public class RealEstate {
             this.housePrice = housePrice;
         }
 
-        public String getHouseAddress() {
-            return houseAddress;
-        }
-
         public void setHouseAddress(String houseAddress) {
             this.houseAddress = houseAddress;
-        }
-
-        public double getHouseSquare() {
-            return houseSquare;
         }
 
         public void setHouseSquare(double houseSquare) {
             this.houseSquare = houseSquare;
         }
 
-        public int getHouseNumberOfRooms() {
-            return houseNumberOfRooms;
-        }
-
         public void setHouseNumberOfRooms(int houseNumberOfRooms) {
             this.houseNumberOfRooms = houseNumberOfRooms;
         }
 
-        public boolean isHouseIsSold() {
-            return houseIsSold;
-        }
-
         public void setHouseIsSold(boolean houseIsSold) {
             this.houseIsSold = houseIsSold;
-        }
-
-        public double getHouseAreaSquare() {
-            return houseAreaSquare;
         }
 
         public void setHouseAreaSquare(double houseAreaSquare) {

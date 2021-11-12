@@ -13,24 +13,24 @@ public class Purchase {
         int customerSum;
         int apartPrice;
 
-        public void conditionDescription() {
+        public void printConditionDescription() {
             System.out.println(CUSTOMERS_SUM_PRINT + customerSum);
             System.out.println(APARTS_PRICE_PRINT + apartPrice);
-            possibilityCalc(apartPrice, customerSum);
+            calcPossibility(apartPrice, customerSum);
             System.out.println(EMPTY_RAW_PRINT);
         }
 
-        public void possibilityCalc(int apartPrice, int customerHas) {
+        public void calcPossibility(int apartPrice, int customerHas) {
             boolean purchaseIsPossible;
             if (apartPrice <= customerHas) {
                 purchaseIsPossible = true;
             } else {
                 purchaseIsPossible = false;
             }
-            possibilityPrint(purchaseIsPossible);
+            printPossibility(purchaseIsPossible);
         }
 
-        public void possibilityPrint(boolean purchaseIsPossible) {
+        public void printPossibility(boolean purchaseIsPossible) {
             if (!purchaseIsPossible) {
                 System.out.println("Purchase's impossible :(");
             } else {
@@ -47,22 +47,22 @@ public class Purchase {
         Customer secondCustomer = new Customer();
         secondCustomer.setCustomersName("Second customer");
         secondCustomer.setCustomersSum(450432);
-        firstCustomer.customerDescription();
+        firstCustomer.printCustomerDescription();
 
         Customer thirdCustomer = new Customer();
         thirdCustomer.setCustomersName("Third customer");
         thirdCustomer.setCustomersSum(128000);
-        firstCustomer.customerDescription();
+        firstCustomer.printCustomerDescription();
 
         Customer forthCustomer = new Customer();
         forthCustomer.setCustomersName("Forth customer");
         forthCustomer.setCustomersSum(5439888);
-        firstCustomer.customerDescription();
+        firstCustomer.printCustomerDescription();
 
-        firstCustomer.customerDescription();
-        secondCustomer.customerDescription();
-        thirdCustomer.customerDescription();
-        forthCustomer.customerDescription();
+        firstCustomer.printCustomerDescription();
+        secondCustomer.printCustomerDescription();
+        thirdCustomer.printCustomerDescription();
+        forthCustomer.printCustomerDescription();
         System.out.println(EMPTY_RAW_PRINT +
                 EMPTY_RAW_PRINT +
                 EMPTY_RAW_PRINT);
@@ -101,8 +101,8 @@ public class Purchase {
         secondHouse.setHouseNumberOfRooms(5);
         secondHouse.setHouseIsSold(true);
 
-        firstApart.apartDescription();
-        secondApart.apartDescription();
+        firstApart.printApartDescription();
+        secondApart.printApartDescription();
         firstHouse.houseDescription();
         secondHouse.houseDescription();
         System.out.println("" +
@@ -117,13 +117,13 @@ public class Purchase {
         Seller secondSeller = new Seller("Second seller", "Second seller's address");
         secondSeller.setHousesList(List.of(firstHouse));
 
-        firstSeller.sellerDescription();
+        firstSeller.printSellerDescription();
         /* check apart's list and house's list aren't empty
         if it's true, print their description
         */
         if (firstSeller.getApartsList() != null) {
             for (int i = 0; i < firstSeller.getApartsList().size(); i++) {
-                firstSeller.getApartsList().get(i).apartDescription();
+                firstSeller.getApartsList().get(i).printApartDescription();
             }
         } else {
             System.out.println("There aren't aparts");
@@ -138,13 +138,13 @@ public class Purchase {
         System.out.println(EMPTY_RAW_PRINT);
         System.out.println(EMPTY_RAW_PRINT);
 
-        secondSeller.sellerDescription();
+        secondSeller.printSellerDescription();
         /* check apart's list and house's list aren't empty
         if it's true, print their description
         */
         if (secondSeller.getApartsList() != null) {
             for (int i = 0; i < secondSeller.getApartsList().size(); i++) {
-                secondSeller.getApartsList().get(i).apartDescription();
+                secondSeller.getApartsList().get(i).printApartDescription();
             }
         } else {
             System.out.println("There aren't aparts");
@@ -176,9 +176,9 @@ public class Purchase {
         forthCondition.customerSum = forthCustomer.getCustomersSum();
         forthCondition.apartPrice = firstApart.getApartPrice();
 
-        firstCondition.conditionDescription();
-        secondCondition.conditionDescription();
-        thirdCondition.conditionDescription();
-        forthCondition.conditionDescription();
+        firstCondition.printConditionDescription();
+        secondCondition.printConditionDescription();
+        thirdCondition.printConditionDescription();
+        forthCondition.printConditionDescription();
     }
 }

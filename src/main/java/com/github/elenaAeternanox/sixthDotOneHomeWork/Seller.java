@@ -35,7 +35,7 @@ public class Seller {
         this.housesList = housesList;
     }
 
-    public void sellerDescription() {
+    public void printSellerDescription() {
         System.out.println(SELLER_TYPE_PRINT);
         System.out.println(SELLER_NAME_PRINT + sellersName);
         System.out.println(SELLER_ADDRESS + sellersAddress);
